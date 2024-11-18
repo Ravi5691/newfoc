@@ -29,7 +29,7 @@ const RazorpayPayment = () => {
       if (!data.id) throw new Error("Failed to create Razorpay order");
   
       const options = {
-        key: process.env.RAZORPAY_KEY_ID,
+        key:'rzp_test_h9pUN8QZdWbLIJ',
         amount: price * 100, 
         currency: data.currency,
         name: "Your Company",
@@ -81,7 +81,7 @@ const RazorpayPayment = () => {
           <span className="text-white">Great for trying out Finament and for tiny teams</span>
         </div>
         <button
-          onClick={() => handlePayment(500)}
+          onClick={() => handlePayment(50)}
           type="button"
           className="text-white bg-Green-500 hover:bg-Green-600 focus:ring-4 focus:outline-none focus:ring-Green-200 dark:bg-Green-700 dark:hover:bg-Green-800 dark:focus:ring-Green-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center"
         >
