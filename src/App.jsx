@@ -8,6 +8,7 @@ import Login from './components/HeaderRouts/Login';
 import Services from './components/HeaderRouts/Services';
 import Contact from './components/HeaderRouts/Contact';
 import RazorpayPayment from './components/payment/payment';
+import Dashboard from './components/Dashboard/dashboard';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Services' element={<Services/>}/>
           <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
      </BrowserRouter>
   );

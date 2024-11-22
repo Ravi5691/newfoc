@@ -29,7 +29,7 @@ const RazorpayPayment = () => {
       if (!data.id) throw new Error("Failed to create Razorpay order");
   
       const options = {
-        key:'rzp_test_h9pUN8QZdWbLIJ',
+        key:import.meta.env.VITE_RAZORPAY_KEY_ID,
         amount: price * 100, 
         currency: data.currency,
         name: "Your Company",
