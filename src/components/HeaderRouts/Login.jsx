@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase.config';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth' ;
+import { getAuth,GoogleAuthProvider , signInWithPopup } from "firebase/auth";
+import {auth , googleProvider} from '../../firebase.js';
+
 
 const Login = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -63,7 +65,20 @@ const Login = () => {
         }
       }
     }
-    setLoading(false);
+  };
+
+  const handleGoogleSignIn = async () => {
+    try {
+      setLoading(true);
+      const result = await signInWithPopup(auth, googleProvider);
+      console.log('User signed in with Google:', result.user);
+      alert('Successfully signed in with Google!');
+    } catch (error) {
+      console.error('Google sign-in error:', error);
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -137,6 +152,15 @@ const Login = () => {
           className="w-full bg-black text-white py-2 rounded-lg"
         >
           {loading ? 'Loading...' : isSignUp ? 'Sign Up' : 'Sign In'}
+        </button>
+
+        <button
+          type="button"
+          disabled={loading}
+          onClick={handleGoogleSignIn}
+          className="w-full bg-black text-white py-2 rounded-lg mt-2"
+        >
+          Sign in with Google
         </button>
       </form>
     </div>
