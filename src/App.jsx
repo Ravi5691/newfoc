@@ -15,13 +15,13 @@ function App() {
      <BrowserRouter>
         <Routes>
           <Route path="/" element={<HeaderElement/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
           <Route path="/pricing" element={<RazorpayPayment />} />
           <Route path="/questions" element={<QuestionAsking/>}/>
           <Route path='/about' element={<AboutUs/>}/>
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Services' element={<Services/>}/>
-          <Route path='/Contact' element={<Contact/>}/>
-          <Route path='/dashboard' element={<Dashboard/>}/>
+          <Route path='/Contact' element={<Contact/>}/> 
         </Routes>
      </BrowserRouter>
   );
