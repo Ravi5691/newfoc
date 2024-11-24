@@ -14,7 +14,7 @@ const BarAnimation = () => {
                 key={i}
                 className="text-white text-5xl p-3 font-semibold whitespace-nowrap inline-flex items-center justify-center"
               >
-                •  NEW SITE LAUNCHING SOON&nbsp;
+                •  TECH SERVICES COMING SOON&nbsp;
               </div>
             ))}
           {Array(12)
@@ -24,7 +24,7 @@ const BarAnimation = () => {
                 key={i + 12} // Different key to avoid duplicate key warning
                 className="text-white text-5xl p-3 font-semibold inline-flex items-center justify-center"
               >
-                • NEW SITE LAUNCHING SOON&nbsp;
+                • TECH SERVICES COMING SOON&nbsp;
               </div>
             ))}
         </div>
