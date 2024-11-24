@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const MultiStepForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -389,12 +391,13 @@ const MultiStepForm = () => {
       </div>
       <div className="bg-gradient-to-r from-[#3C5557] to-[#1D2B2C] rounded-lg p-[2px]">
         {currentStep === totalSteps ? (
+          <Link to="/pricing">
           <button
-            onClick={() => alert('Signing in...')}
             className="bg-[#0e1919] text-xs px-9 h-8 rounded-lg"
           >
-            Sign In
+            Payment
           </button>
+          </Link>
         ) : (
           <button
             onClick={handleNext}
