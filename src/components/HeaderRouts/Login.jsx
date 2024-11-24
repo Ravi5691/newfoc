@@ -82,7 +82,8 @@ const Login = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white p-8 shadow-lg rounded-lg">
+    <div className='flex justify-center place-items-center bg-elliptical-gradient h-screen'>
+    <div className="max-w-md mx-auto place-content-center sm:w-[400px] w-[300px] bg-white p-8 shadow-lg rounded-lg">
       <div className="flex justify-center mb-4">
         <button
           className={`px-4 py-2 ${isSignUp ? 'border-b-2 border-black' : 'text-gray-400'}`}
@@ -163,6 +164,7 @@ const Login = () => {
           Sign in with Google
         </button>
       </form>
+    </div>
     </div>
   );
 };

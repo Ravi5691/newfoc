@@ -18,10 +18,10 @@ const Count = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 w-full max-w-screen-xl mx-auto text-center">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center justify-center h-full w-full">
-              <h2 className="text-green text-5xl md:text-7xl font-bold transform scale-y-130">
+              <h2 className="text-white text-5xl md:text-7xl font-bold transform scale-y-130">
                 {counterOn ? <CountUp start={0} end={stat.value} duration={2} /> : 0}
               </h2>
-              <p className="text-orange-500 text-lg md:text-xl font-semibold uppercase mt-2">
+              <p className="text-green text-lg md:text-xl font-semibold uppercase mt-2">
                 {stat.label}
               </p>
             </div>

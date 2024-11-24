@@ -19,13 +19,12 @@ const HeaderElement = () => {
          {/* Header Section */}
       <LightCursor/>
       <div >
-      <nav class=" fixed  backdrop-blur-md bg-[#1D2B2C] shadow-md bg-opacity-50 w-full z-20 top-0 start-0 my-5 mt-0 ">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-  <a href="#" class="flex item-start space-x-3 rtl:space-x-reverse">
-      <span class="self-center text-4xl font-serif font-semibold whitespace-nowrap dark:text-white">FOCS</span>
+      <nav class=" fixed  backdrop-blur-md bg-[#1D2B2C] shadow-md bg-opacity-50 w-full z-20 top-0 start-0 my-5 mt-0 sm:h-[86px] ">
+  <div class="max-w-screen grid grid-cols-2 grid-wrap items-center p-4 sm:h-[57px]  ">
+  <a class="flex item-start justify-start space-x-3  sm:pl-14 rtl:space-x-reverse">
+      <a href='#' className="inline-flex h-14 font-serif animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-extrabold text-slate-400 text-3xl transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">FOCS</a>
   </a>
-  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="text-white bg-Green-700 hover:bg-Green-800 focus:ring-4 focus:outline-none focus:ring-Green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Book a meet</button>
+  <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse justify-end ">
       <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -40,13 +39,13 @@ const HeaderElement = () => {
             </svg>
           </button>
   </div>
-  <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${menuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-transparent md:dark:bg-transparent dark:border-gray-700">
+  <div className={`items-center sm:justify-end justify-between sm:pr-14 w-full md:flex md:w-auto md:order-1 ${menuOpen ? 'block' : 'hidden'}`} id="navbar-sticky">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 items-start w-[340px] sm:w-auto font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-transparent md:dark:bg-transparent dark:border-gray-700">
             <li>
-              <Link to="/" className="block py-2 px-3 text-white bg-green rounded md:bg-transparent md:text-green md:p-0 md:dark:text-green" aria-current="page">Home</Link>
+              <Link to="/" className="block py-2 px-3 text-white bg-green rounded md:bg-transparent md:text-green md:p-0 " aria-current="page">Home</Link>
             </li>
             <li>
-              <Link to="/aboutUs" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</Link>
+              <Link to="/aboutUs" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About us</Link>
             </li>
             <li>
               <Link to="/Login" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Login</Link>
@@ -54,11 +53,14 @@ const HeaderElement = () => {
             <li>
               <Link to="/Searvices" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/Contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</Link>
             </li>
             <li>
               <Link to="/pricing" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</Link>
+            </li> */}
+            <li>
+              <Link to="/" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Book a meet</Link>
             </li>
           </ul>
         </div>
@@ -80,7 +82,7 @@ const HeaderElement = () => {
       <div className='flex justify-center m-4 mt-0'>
         <Link to="/questions">
         <button
-        className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+        className="text-white bg-Green-700 hover:bg-Green-800 focus:ring-4 focus:outline-none p-3 focus:ring-Green-300 font-medium rounded-lg text-base px-4 py-2 text-center">
           Let's Start
         </button>
         </Link>
