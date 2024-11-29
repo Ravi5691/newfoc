@@ -27,5 +27,15 @@
   
   } 
 
- 
+  .content-transition {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5ms ease-in-out;
+    will-change: opacity, transform;
+  }
+  
+  .content-transition.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
      

@@ -5,7 +5,7 @@ import LightCursor from '../cursorEffect'
 import Faq from './faq'
 import Footer from './footer'
 import BarAnimation from './barAnimation'
-import ImageSwitcher from './imageStw'
+import HowItWork from './howItWork' 
 
 const HeaderElement = () => {
   const [menuOpen, setMenuOpen] = useState(false); // State to manage menu visibility
@@ -111,12 +111,12 @@ const HeaderElement = () => {
         <Count/>
       </div>
 
-      <div className='mb-20'>
+      <div className='mb-48'>
         <BarAnimation/>
       </div>
       
       <div>
-        <ImageSwitcher/>
+        <HowItWork/>
       </div>
       
       {/* <div className='my-14'>
