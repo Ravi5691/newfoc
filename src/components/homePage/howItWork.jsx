@@ -147,16 +147,17 @@ const HowItWorks = () => {
 
   return (
     <div className="bg-transparent">
-    <div className="flex justify-center text-8xl text-white items-center h-[50vh]">
+    <div className="sm:block hidden">
+    <div className="flex justify-center sm:text-8xl text-4xl text-white items-center h-[50vh] ">
       <span>How it <span className="text-green">Works</span></span>
     </div>
     <div 
     ref={contentRef}
     className=" text-white flex justify-center py-10 mx-10 min-h-screen transition-all duration-1000 ease-in-out"
     style={{ opacity: 0, transform: 'translateY(100px)' }}>
-      <div className="flex max-w-full w-full gap-20">
+      <div className="flex flex-row max-w-full w-full gap-20">
         {/* Left Column */}
-        <div className="w-1/4 sticky top-0 h-screen text-lg flex flex-col justify-center space-y-4 tracking-wider">
+        <div className="w-1/4 sticky top-0 h-screen text-lg hidden sm:flex flex-col justify-center space-y-4 tracking-wider">
           {steps.map((step) => (
             <div
               key={step.id}
@@ -207,6 +208,13 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
+      </div>
+    </div>
+    </div>
+    {/* mobile how it works section */}
+    <div className="sm:hidden flex flex-col">
+      <div className="flex justify-center text-4xl text-white items-center h-[50vh] ">
+        <span>How it <span className="text-green">Works</span></span>
       </div>
     </div>
     </div>
