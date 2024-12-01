@@ -83,7 +83,7 @@ const HeaderElement = () => {
       <div className='flex justify-center m-4 mt-0'>
         <Link to="/questions">
         <button
-        className="text-white bg-Green-700 hover:bg-Green-800 focus:ring-4 focus:outline-none p-3 focus:ring-Green-300 font-medium rounded-lg text-base px-4 py-2 text-center">
+        className="inline-flex h-12 font-serif animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 text-xl transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
           Let's Start
         </button>
         </Link>
