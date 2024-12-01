@@ -6,6 +6,7 @@ import Faq from './faq'
 import Footer from './footer'
 import BarAnimation from './barAnimation'
 import HowItWork from './howItWork' 
+import LaunchNotification from './launcingBoard'
 
 const HeaderElement = () => {
   const [menuOpen, setMenuOpen] = useState(false); // State to manage menu visibility
@@ -109,6 +110,10 @@ const HeaderElement = () => {
 
       <div className='w-full max-w-[1447px] mx-4'>
         <Count/>
+      </div>
+
+      <div>
+        <LaunchNotification/>
       </div>
 
       <div className='mb-48'>
