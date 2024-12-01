@@ -23,7 +23,7 @@ const HeaderElement = () => {
       <nav class=" fixed  backdrop-blur-md bg-[#1D2B2C] shadow-md bg-opacity-50 w-full z-20 top-0 start-0 my-5 mt-0 sm:h-[86px] ">
   <div class="max-w-screen grid grid-cols-2 grid-wrap items-center p-4 sm:h-[57px]  ">
   <a class="flex item-start justify-start space-x-3  sm:pl-14 rtl:space-x-reverse">
-      <a href='#' className="inline-flex h-14 font-serif animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-extrabold text-slate-400 text-3xl transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">FOCS</a>
+      <a href='#' className="flex justify-center items-center h-14 font-serif  font-extrabold text-white text-3xl">Krip.ai</a>
   </a>
   <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse justify-end ">
       <button
@@ -61,7 +61,7 @@ const HeaderElement = () => {
               <Link to="/pricing" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</Link>
             </li> */}
             <li>
-              <Link to="/" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-green md:p-0 md:dark:hover:text-green dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Book a meet</Link>
+              <Link to="/" className="text-white bg-Green-700 hover:bg-Green-800 focus:ring-4 focus:outline-none focus:ring-Green-300 font-medium rounded-lg text-sm px-4 py-2 text-center">Book a meet</Link>
             </li>
           </ul>
         </div>
@@ -108,7 +108,7 @@ const HeaderElement = () => {
       </span>
       </div>
 
-      <div className='w-full max-w-[1447px] mx-4'>
+      <div className='w-full max-w-[1447px] mx-4 mt-20'>
         <Count/>
       </div>
 

@@ -4,10 +4,10 @@ const LaunchNotification = () => {
   return (
     <div className=" my-40 mb-52 flex items-center justify-center">
       <div className="text-center text-white space-y-6">
-        <h1 className="text-4xl md:text-5xl font-bold">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif">
         FREELANCERS ASSEMBLES!!!
         </h1>
-        <h1 className="text-4xl md:text-5xl font-bold">
+        <h1 className="text-4xl md:text-5xl font-bold font-serif">
         JOIN OUR WAITLIST
         </h1>
         <p className="text-lg md:text-xl">
