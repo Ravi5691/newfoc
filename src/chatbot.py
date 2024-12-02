@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
 import os
-from dotenv import load_dotenv # type: ignore
+from dotenv import load_dotenv  # type: ignore
 
 load_dotenv()  # Load environment variables from .env file
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -18,6 +18,9 @@ class FormData(BaseModel):
     content_type: str
     template: str
     length_of_video: Optional[str] = None  # Optional for non-video services
+    order_number: Optional[str] = None
+    order_date: Optional[str] = None
+    invoice_details: Optional[str] = None
 
 @app.post("/generate_spec_sheet")
 async def generate_spec_sheet(data: FormData):
@@ -33,6 +36,9 @@ async def generate_spec_sheet(data: FormData):
                 "Content Details": {"type": "string"},
                 "Frequency": {"type": "string"},
                 "Length": {"type": "string"},
+                "Order Number": {"type": "string"},
+                "Order Date": {"type": "string"},
+                "Invoice Details": {"type": "string"},
             },
             "required": ["Prompt", "Project Type", "Content Details"]
         }
@@ -46,6 +52,9 @@ async def generate_spec_sheet(data: FormData):
             "Subtype of video": {"type": "string"},
             "Frequency of video": {"type": "string"},
             "Length of video": {"type": "string"},
+            "Order Number": {"type": "string"},
+            "Order Date": {"type": "string"},
+            "Invoice Details": {"type": "string"},
         }
     elif data.service.lower() == "graphic design":
         function_call["parameters"]["properties"] = {
@@ -54,6 +63,9 @@ async def generate_spec_sheet(data: FormData):
             "Color scheme": {"type": "string"},
             "Dimensions": {"type": "string"},
             "File format": {"type": "string"},
+            "Order Number": {"type": "string"},
+            "Order Date": {"type": "string"},
+            "Invoice Details": {"type": "string"},
         }
 
     # Prepare a content message based on the service type
@@ -64,6 +76,15 @@ async def generate_spec_sheet(data: FormData):
 
     if data.length_of_video:
         service_description += f" Length of video: {data.length_of_video}."
+
+    if data.order_number:
+        service_description += f" Order Number: {data.order_number}."
+    
+    if data.order_date:
+        service_description += f" Order Date: {data.order_date}."
+    
+    if data.invoice_details:
+        service_description += f" Invoice Details: {data.invoice_details}."
 
     try:
         # Call the OpenAI API with function calling
@@ -91,3 +112,4 @@ async def generate_spec_sheet(data: FormData):
             return {"error": "Unexpected response format from OpenAI"}
     except Exception as e:
         return {"error": str(e)}
+    

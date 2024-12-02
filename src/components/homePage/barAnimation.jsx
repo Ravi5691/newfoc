@@ -4,7 +4,7 @@ const BarAnimation = () => {
   return (
         //   {/* Text Animation */}
        
-        <div className="bg-green w-screen  p-4 flex items-center overflow-hidden h-28">
+        <div className="bg-green w-screen  p-4 flex items-center overflow-hidden sm:h-28 h-20">
         {/* Wrapper for scrolling content */}
         <div className="animate whitespace-nowrap flex items-center">
           {Array(12)
